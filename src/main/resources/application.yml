@@ -1,0 +1,21 @@
+server:
+  port: 9401
+spring:
+  application:
+    name: ifd-security
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ifd_security
+    username: "postgres"
+    password: "postgres"
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+security:
+  jwt:
+    key-store: classpath:keystore.jks
+    key-store-password: letmein
+    key-pair-alias: mytestkey
+    key-pair-password: changeme
